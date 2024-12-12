@@ -4,10 +4,10 @@ The `BlacklistFetcher` library provides a simple and efficient way to fetch and 
 
 ## Installation
 
-To use the `BlacklistFetcher` library, you need to install the `aiohttp` package for asynchronous HTTP requests.
+To use the `BlacklistFetcher` library, you can install it via pip:
 
 ```bash
-pip install aiohttp
+pip install git+https://github.com/botsarefuture/blacklistfetcher.git
 ```
 
 ---
