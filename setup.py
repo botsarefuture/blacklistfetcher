@@ -1,10 +1,17 @@
 from setuptools import setup, find_packages
+import os
+
+# Read the README file for the long description
+long_description = ''
+if os.path.exists('README.md'):
+    with open('README.md', encoding='utf-8') as f:
+        long_description = f.read()
 
 setup(
     name='blacklistfetcher',
     version='1.0.0',
     description='A Python module for fetching and parsing a blacklist of IP addresses.',
-    long_description=open('README.md').read(),
+    long_description=long_description,
     long_description_content_type='text/markdown',
     author='Verso Vuorenmaa',
     author_email='verso@luova.club',
@@ -23,4 +30,6 @@ setup(
         'Operating System :: OS Independent',
     ],
     python_requires='>=3.6',
+    license='MIT',  # Define the license to prevent warnings on some systems
+    include_package_data=True,  # Include non-Python files (like README.md) in the package
 )
